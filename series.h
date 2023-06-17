@@ -54,6 +54,6 @@ int fibonacci(int n)
 	  /* Primero ejecuto la que tenga menos llamadas recursivas para que su uso de memoria
 	     sea de menos memoria a mas así doy tiempo al sistema para que frene el programa si
 	     está usando mucha memoria. */
-		return (fibonacci(n - 2)	+ fibonacci(n - 1));
+		return (fibonacci(n - 2) + fibonacci(n - 1));
 	 } 
 }
