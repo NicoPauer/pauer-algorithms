@@ -94,7 +94,7 @@ void menu()
 				printf("\nIngrese exponente entera: ");
 				scanf("%d", &exponente);
 			/* Muestro resultado */
-				printf("\nbase %.2lf a exponente %d da de resultado %.2lf", base, exponente, potencia_exponente_entera(base, exponente));
+				printf("\nbase %.2lf a exponente %d da de resultado %.2lf\n", base, exponente, potencia_exponente_entera(base, exponente));
 			break;
 		  /* Si la opcion es la ultima que se mostro sale del programa */	
 			case 11: break; break;
