@@ -39,7 +39,7 @@ void menu()
   /* Pido una opcion */	
 	printf("¿Que desea hacer? \n");
 	separar(separadores, separador);
-	printf("1) Calcular fibonacci. \n2) Calcular sumatoria de n terminos.\n3) Calcular otra cosa.\n4) Salir del programa.\n");
+	printf("1) Calcular fibonacci. \n2) Calcular sumatoria de n terminos.\n3) Calcular otra cosa.\n4) Factorial de n.\n5) potencia a exponente entera.\n11) Salir del programa.\n");
 	separar(separadores, separador);
 	printf("\tIngrese opcion: ");
 	scanf("%d", &opcion);
@@ -72,8 +72,32 @@ void menu()
 			   separar(separadores, separador);
 			   printf("La sumatoria del 1 al %d es %d.\n", termino, sumatoria_estandar(termino)); 
 			   separar(separadores, separador);
-		  /* Si la opcion es 4 sale del programa */	
-			case 4: break; break;
+			break;
+
+			case 4:
+			 /* Calcula factorial de n */
+				int n;
+			    /* Obtengo el numero */	
+				printf("\nIngrese entero para calcular su factorial: ");
+				scanf("%d", &n);
+			   /* Muestro el resultado */
+				printf("\nEl factorial de %d es %d.\n", n, factorial(n));
+			break;
+
+			case 5:
+			  /* Calcula potencia de exponente entera */
+				double base;
+				int exponente;
+			/* Obtengo los datos */	
+				printf("\nIngrese base real: ");
+				scanf("%lf", &base);
+				printf("\nIngrese exponente entera: ");
+				scanf("%d", &exponente);
+			/* Muestro resultado */
+				printf("\nbase %.2lf a exponente %d da de resultado %.2lf", base, exponente, potencia_exponente_entera(base, exponente));
+			break;
+		  /* Si la opcion es la ultima que se mostro sale del programa */	
+			case 11: break; break;
 		  /* Digo que ingrese opcion valida */
 			default: 
 				printf("\n[INGRESE OPCION VALIDA]\n");
