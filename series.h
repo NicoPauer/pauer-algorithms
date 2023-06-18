@@ -1,7 +1,7 @@
 /* Autor: Nicolas Pauer
    Mail: nicolaspauer20@gmail.com
    Creacion: 17/06/2023
-   Actualizacion: 17/06/2023
+   Actualizacion: 18/06/2023
    Descripcion: Provee funciones para calcular series(sucesiones). 
 */
 
@@ -12,6 +12,49 @@
 #ifndef SERIES_H
 	#define SERIES_H
 #endif
+
+double potencia_exponente_entera(double base, int exponente)
+{
+ /* Autor: Nicolas Pauer
+   Mail: nicolaspauer20@gmail.com
+   Creacion: 18/06/2023
+   Actualizacion: 18/06/2023 */
+  /* Calcula potencia real de base real a exponente entera */	
+	if (exponente == 0)
+	{
+	  /* Caso base: Exponente es cero, entonces la potencia es 1 */
+		return 1;
+	}
+	else
+	{
+	  /* Caso recursivo: Exponente distinta de cero, entonces la potencia
+   	     es base por potencia de base a la exponente menos 1 */
+		return (base * potencia_exponente_entera(base, (exponente - 1)));
+	}
+}
+
+int factorial(int n)
+{
+/* Autor: Nicolas Pauer
+   Mail: nicolaspauer20@gmail.com
+   Creacion: 18/06/2023
+   Actualizacion: 18/06/2023 
+   Descricion: Usa recursividad para calcular el factorial de un numero entero.
+   */
+	if (n == 0)
+	{
+	    /* Caso base: si el numero es cero,
+     	       entonces, devolver 1*/	
+		return 1;
+	}
+	else
+	{
+	   /* Caso recursivo: si el numero distinto de cero
+    	      el numero, entonces devolver el producto entre
+	      el numero y el factorial del numero reducido en 1 */
+		return (n * factorial(n - 1));
+	}
+}
 
 int sumatoria_estandar(int n)
 {
@@ -32,6 +75,7 @@ int sumatoria_estandar(int n)
 		 return (sumatoria_estandar(n - 1) + n);
 	 }
 }	
+
 int fibonacci(int n)
 {
 	/* 
